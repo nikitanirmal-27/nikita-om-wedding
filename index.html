@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#4a1415" />
+  <title>Nikita & Om | We're Getting Married</title>
+  <meta name="description" content="Nikita & Om are getting married on 26 November 2026 in Worli, Mumbai." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Nikita ❤️ Om | We're Getting Married" />
+  <meta property="og:description" content="26 November 2026 • Worli, Mumbai" />
+  <meta property="og:image" content="/assets/ganpati.webp" />
+  <meta property="og:image:alt" content="Nikita and Om wedding invitation" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:width" content="1000" />
+  <meta property="og:image:height" content="560" />
+  <meta name="twitter:title" content="Nikita ❤️ Om | We're Getting Married" />
+  <meta name="twitter:description" content="26 November 2026 • Worli, Mumbai" />
+  <meta name="twitter:image" content="/assets/ganpati.webp" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="assets/ganpati.webp" type="image/webp" />
+  <link rel="preload" href="assets/ganpati.webp" as="image" type="image/webp" />
+  <link rel="preload" href="assets/master-couple.webp" as="image" type="image/webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Noto+Serif+Devanagari:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="intro-locked">
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- OPENING / CURTAIN EXPERIENCE -->
+  <section class="intro-gate" id="introGate" aria-label="Wedding invitation opening">
+    <div class="curtain curtain-left" aria-hidden="true"></div>
+    <div class="curtain curtain-right" aria-hidden="true"></div>
+
+    <div class="intro-stage">
+      <button class="tap-begin" id="tapBegin" type="button" aria-label="Open the wedding curtains">
+        <span class="tap-icon">✦</span>
+        <span>Tap to begin</span>
+      </button>
+
+      <div class="ganpati-reveal" id="ganpatiReveal" aria-hidden="true">
+        <p class="devanagari blessing" lang="mr">॥ श्री गणेशाय नमः ॥</p>
+        <img src="assets/ganpati.webp" alt="Golden Ganpati line illustration" width="1000" height="560" decoding="async" fetchpriority="high" />
+      </div>
+
+      <div class="name-reveal" id="nameReveal" aria-hidden="true">
+        <p class="eyebrow">With blessings and love</p>
+        <h1><span id="introBride">Nikita</span><span class="amp">&</span><span id="introGroom">Om</span></h1>
+        <p class="devanagari marathi-names" lang="mr"><span id="introBrideMr">निकिता निर्मळ</span> <b>❤️</b> <span id="introGroomMr">ओम हुनारी</span></p>
+        <p class="getting-married">are getting married</p>
+        <p class="date-mark" id="introDate">26 • 11 • 2026</p>
+        <button class="primary-btn" id="openInvite" type="button">Open Our Invitation <span>↓</span></button>
+      </div>
+
+      <div class="petals" aria-hidden="true">
+        <span>✿</span><span>❀</span><span>✦</span><span>✿</span><span>❀</span><span>✦</span>
+      </div>
+    </div>
+  </section>
+
+  <button class="music-toggle" id="musicToggle" type="button" aria-label="Toggle wedding music" hidden>♪</button>
+  <audio id="weddingMusic" loop preload="none"></audio>
+
+  <main id="inviteContent">
+    <!-- HERO -->
+    <section class="hero section-pad" id="hero">
+      <div class="personal-greeting reveal" id="personalGreeting" hidden>
+        <span>❤️</span>
+        <p>Dear <strong id="guestName"></strong>, we'd love for you to celebrate with us.</p>
+      </div>
+
+      <div class="hero-copy reveal">
+        <h2><span>Nikita</span><span class="amp">&</span><span>Om</span></h2>
+      </div>
+
+      <div class="couple-art reveal">
+        <figure class="master-art-frame">
+          <img id="heroCoupleImage" src="assets/master-couple.webp" alt="Illustrated portrait of Nikita and Om for their wedding invitation" width="1122" height="1402" decoding="async" fetchpriority="high" />
+        </figure>
+      </div>
+
+      <div class="intro-message reveal">
+        <p class="small-title" id="introEyebrow">Together with our families</p>
+        <p class="display-quote" id="introMessage">we invite you to celebrate the beginning of our forever.</p>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="countdown-section section-pad reveal" id="countdown">
+      <div class="section-ornament">❁</div>
+      <h2 class="countdown-heading">Counting down to our forever <span>❤️</span></h2>
+      <div class="countdown-grid" id="countdownGrid" aria-label="Wedding countdown">
+        <div><strong id="days">00</strong><span>Days</span></div>
+        <div><strong id="hours">00</strong><span>Hours</span></div>
+        <div><strong id="minutes">00</strong><span>Minutes</span></div>
+        <div><strong id="seconds">00</strong><span>Seconds</span></div>
+      </div>
+      <div class="wedding-date-card">
+        <span id="countdownDay">Thursday</span>
+        <strong id="countdownDate">26 November 2026</strong>
+        <span id="countdownTime">12:16 PM</span>
+      </div>
+      <p class="countdown-status" id="countdownStatus" role="status" aria-live="polite"></p>
+    </section>
+
+    <!-- EVENTS -->
+    <section class="events section-pad" id="events">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Save these moments</p>
+        <h2>The Celebrations Begin</h2>
+        <p>Four celebrations. One unforgettable week.</p>
+      </div>
+      <div class="events-list" id="eventsList"></div>
+    </section>
+
+    <!-- OUR STORY -->
+    <section class="story section-pad" id="story">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Our story</p>
+        <h2>Our Love Story ❤️</h2>
+      </div>
+      <div class="story-list" id="storyList"></div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="rsvp section-pad" id="rsvp">
+      <div class="rsvp-card reveal">
+        <p class="eyebrow">RSVP</p>
+        <h2>Will you celebrate with us?</h2>
+        <p class="rsvp-sub">Your response will be saved to our Invitations sheet.</p>
+
+        <form id="rsvpForm" novalidate>
+          <input type="hidden" name="guestId" id="guestId" />
+          <div class="honeypot" aria-hidden="true">
+            <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+          </div>
+
+          <label>
+            <span>Your name</span>
+            <input type="text" name="guestName" id="rsvpName" placeholder="Your name" autocomplete="name" required maxlength="80" />
+          </label>
+
+          <div class="form-row">
+            <label>
+              <span>Number of guests</span>
+              <select name="guestCount" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+            </label>
+            <label>
+              <span>Phone <small>(optional)</small></span>
+              <input type="tel" name="phone" placeholder="+91…" autocomplete="tel" inputmode="tel" maxlength="20" />
+            </label>
+          </div>
+
+          <fieldset>
+            <legend>Will you be joining us?</legend>
+            <div class="choice-grid">
+              <label class="choice"><input type="radio" name="attending" value="Yes" required /><span>✓ Joyfully Accept</span></label>
+              <label class="choice"><input type="radio" name="attending" value="No" required /><span>Can’t make it 🥲</span></label>
+            </div>
+          </fieldset>
+
+          <label>
+            <span>A note for us <small>(optional)</small></span>
+            <textarea name="message" rows="3" maxlength="300" placeholder="Blessings, a message, or anything you'd like us to know"></textarea>
+          </label>
+
+          <button class="primary-btn full" type="submit" id="rsvpSubmit">Send RSVP</button>
+          <p class="form-status" id="rsvpStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAMILY -->
+    <section class="family section-pad reveal">
+      <div class="section-ornament">❁</div>
+      <p class="eyebrow">With love and blessings</p>
+      <h2 id="familyHeading">Together with our families</h2>
+      <div class="family-grid">
+        <article class="family-card">
+          <p class="family-label" id="brideFamilyLabel">Bride's family</p>
+          <div class="family-person">
+            <strong id="brideParent1En"></strong>
+            <span class="devanagari" id="brideParent1Mr" lang="mr"></span>
+          </div>
+          <div class="family-person">
+            <strong id="brideParent2En"></strong>
+            <span class="devanagari" id="brideParent2Mr" lang="mr"></span>
+          </div>
+        </article>
+        <article class="family-card">
+          <p class="family-label" id="groomFamilyLabel">Groom's family</p>
+          <div class="family-person">
+            <strong id="groomParent1En"></strong>
+            <span class="devanagari" id="groomParent1Mr" lang="mr"></span>
+          </div>
+          <div class="family-person">
+            <strong id="groomParent2En"></strong>
+            <span class="devanagari" id="groomParent2Mr" lang="mr"></span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="closing section-pad">
+      <div class="closing-card reveal">
+        <p class="eyebrow">From two lives…</p>
+        <h2>to one beautiful adventure.</h2>
+        <div class="monogram" id="monogram">Omnik</div>
+        <div class="closing-divider"></div>
+        <p>We can’t wait to celebrate with you.</p>
+        <h3>Nikita <span>❤️</span> Om</h3>
+        <strong id="closingDate">26 • 11 • 2026</strong>
+        <span id="closingCity">Worli • Mumbai</span>
+        <a class="primary-btn venue-final" id="finalVenueLink" href="#" target="_blank" rel="noopener">📍 Wedding Venue</a>
+      </div>
+    </section>
+  </main>
+
+  <template id="eventTemplate">
+    <article class="event-card reveal">
+      <div class="event-scene" aria-hidden="true"></div>
+      <div class="event-content">
+        <p class="event-icon"></p>
+        <p class="eyebrow event-subtitle"></p>
+        <h3 class="event-title"></h3>
+        <div class="event-date">
+          <span class="event-day"></span>
+          <strong class="event-date-display"></strong>
+          <span class="event-time"></span>
+        </div>
+        <div class="venue-block">
+          <p>📍 <strong class="event-venue"></strong></p>
+          <p class="event-address"></p>
+        </div>
+        <div class="event-actions">
+          <a class="secondary-btn map-btn" target="_blank" rel="noopener">Get Directions</a>
+          <button class="secondary-btn calendar-btn" type="button">Add to Calendar</button>
+        </div>
+        <details class="qr-details">
+          <summary>Show direction QR code</summary>
+          <div class="qr-wrap">
+            <img class="qr-image" alt="QR code for venue directions" loading="lazy" decoding="async" />
+            <p>Scan to open directions</p>
+          </div>
+        </details>
+      </div>
+    </article>
+  </template>
+
+  <template id="storyTemplate">
+    <article class="story-card reveal">
+      <div class="story-step"></div>
+      <div class="story-images"></div>
+      <div class="story-copy">
+        <h3></h3>
+        <p></p>
+      </div>
+    </article>
+  </template>
+
+  <script src="wedding-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

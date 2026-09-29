@@ -1,0 +1,9 @@
+{
+  "name": "nikita-om-ai-wedding-invite",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Deployment-ready mobile-first wedding invitation for Nikita & Om",
+  "dependencies": {
+    "googleapis": "144.0.0"
+  }
+}
